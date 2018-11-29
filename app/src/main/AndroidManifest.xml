@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="example.com.assignment2_part2addressplus"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+
+
+
+<application
+    android:allowBackup="true"
+    android:supportsRtl="true"
+    android:label="@string/app_name"
+    android:theme="@android:style/Theme.Holo"
+    android:logo="@drawable/mailicon"
+    android:icon="@drawable/mailicon">
+
+
+        <activity android:name=".MainActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    <activity android:name=".EditAddressdetailActivity"
+        android:windowSoftInputMode="stateVisible|adjustResize" />
+    <provider android:name=".MyAdressplusContentProvider"
+        android:authorities="com.example.address.addresses.contentprovider" />
+    <activity android:name=".AboutActivity"
+        android:theme="@style/Theme.AppCompat.Dialog">
+
+    </activity>
+    </application>
+
+</manifest>
